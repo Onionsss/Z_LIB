@@ -1,25 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'maven-publish'
 }
-
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.Onionsss'
-                artifactId = 'ext'
-                version = '1.0.0'
-            }
-        }
-    }
-}
-
-group = 'com.github.Onionsss'
-version = '1.0.0'
 
 android {
     compileSdk 31
@@ -58,3 +40,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
+
+
+apply from: '../publish/publish_ext.gradle'
