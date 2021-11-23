@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -29,14 +31,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
 
-    api rootProject.ext.dependencies["appcompatx"]
-    api rootProject.ext.dependencies["designx"]
     api rootProject.ext.dependencies["ktx"]
-    api rootProject.ext.dependencies["constraintx"]
-    implementation project(path: ':RECY')
-    implementation project(path: ':EXT')
+    api rootProject.ext.dependencies["appcompatx"]
+    api rootProject.ext.dependencies["rxbinding-core"]
+    api rootProject.ext.dependencies["recyclerviewx"]
 }

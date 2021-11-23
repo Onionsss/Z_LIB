@@ -10,3 +10,4 @@ rootProject.name = "Z_LIB"
 include ':app'
 include ':EXT'
 include ':VIEW'
+include ':RECY'
