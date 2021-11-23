@@ -3,7 +3,25 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'maven-publish'
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.Onionsss'
+                artifactId = 'RECY'
+                version = '1.0.0'
+            }
+        }
+    }
+}
+
+group = 'com.github.Onionsss'
+version = '1.0.0'
 
 android {
     compileSdk 31
