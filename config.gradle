@@ -34,7 +34,15 @@ ext {
             anko       : "0.10.5",
             rxbinding3 : "3.1.0",
             hiltVersion: "1.0.0-alpha02",
-            hiltAndroidVersion: "2.28.3-alpha"
+            hiltAndroidVersion: "2.28.3-alpha",
+            onion: "1.0.1"
+    ]
+
+    onion = [
+            "ext": "io.github.Onionsss:ext:${dependVersion.onion}",
+            "recy": "io.github.Onionsss:recy:${dependVersion.onion}",
+            "util": "io.github.Onionsss:util:${dependVersion.onion}",
+            "view": "io.github.Onionsss:view:${dependVersion.onion}"
     ]
 
     dependencies = [

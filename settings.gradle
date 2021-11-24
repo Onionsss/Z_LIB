@@ -8,6 +8,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Z_LIB"
 include ':app'
-include ':EXT'
-include ':VIEW'
-include ':RECY'
+include ':Bean'
+include ':Tool'
+include ':Tool:Logger'
+include ':View'
+include ':Tool:Util'
+include ':Tool:Ext'
+include ':View:Recy'

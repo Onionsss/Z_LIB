@@ -11,7 +11,7 @@ task androidSourcesJar(type: Jar) {
 
 ext {
     PUBLISH_GROUP_ID = 'io.github.Onionsss'
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.2'
     PUBLISH_ARTIFACT_ID = 'view'
 }
 
@@ -48,7 +48,7 @@ publishing {
             // Self-explanatory metadata for the most part
             pom {
                 name = PUBLISH_ARTIFACT_ID
-                description = 'UI view'
+                description = 'UI ext'
                 // If your project has a dedicated site, use its URL here
                 url = 'https://github.com/Onionsss/'
                 licenses {
