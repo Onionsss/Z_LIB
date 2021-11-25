@@ -1,11 +1,11 @@
 
 //扩展版本号
 ext.versions = [
-        hiltVersion: "1.0.0-alpha02",
-        hiltAndroidVersion: "2.28.3-alpha",
+        hiltVersion: "1.0.0-alpha03",
+        hiltAndroidVersion: "2.40.2",
         fragmentVersion         : '1.3.3',
         lifecycleVersion        : '2.2.0',
-        roomVersion             : '2.2.5',
+        roomVersion             : '2.3.0',
         archCompomentVersion    : '2.1.0'
 ]
 ext {
@@ -33,16 +33,21 @@ ext {
             drawerLayout   : "1.1.0-alpha03",
             anko       : "0.10.5",
             rxbinding3 : "3.1.0",
-            hiltVersion: "1.0.0-alpha02",
-            hiltAndroidVersion: "2.28.3-alpha",
+            hiltVersion: "1.0.0-alpha03",
+            hiltAndroidVersion: "2.40.2",
             onion: "1.0.1"
     ]
 
     onion = [
-            "ext": "io.github.Onionsss:ext:${dependVersion.onion}",
+            "ext": "io.github.Onionsss:ext:1.0.2",
             "recy": "io.github.Onionsss:recy:${dependVersion.onion}",
             "util": "io.github.Onionsss:util:${dependVersion.onion}",
-            "view": "io.github.Onionsss:view:${dependVersion.onion}"
+            "logger": "io.github.Onionsss:logger:1.0.0",
+            "glide": "io.github.Onionsss:glide:1.0.1",
+            "bean": "io.github.Onionsss:bean:1.0.0",
+            "protocol": "io.github.Onionsss:protocol:1.0.1",
+            "http": "io.github.Onionsss:http:1.0.3",
+            "flowlayout": "io.github.Onionsss:flowlayout:1.0.0"
     ]
 
     dependencies = [
@@ -101,7 +106,7 @@ ext {
             "retrofit-adapter-rxjava2"  : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.retrofit}",
             "okhttp"                    : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",
             "okhttp-logging-interceptor": "com.squareup.okhttp3:logging-interceptor:${dependVersion.okhttp}",
-            "glide"                     : "com.github.bumptech.glide:glide:4.11.0",
+            "glide"                     : "com.github.bumptech.glide:glide:4.12.0",
             "glide-okhttp3-integration" : "com.github.bumptech.glide:okhttp3-integration:1.4.0@aar",
             "jsoup"                     : "org.jsoup:jsoup:1.10.1",
 
@@ -130,5 +135,8 @@ ext {
             "blockcanary-no-op"         : "com.github.moduth:blockcanary-no-op:${dependVersion.blockcanary}",
             "leakcanary-android"        : "com.squareup.leakcanary:leakcanary-android:${dependVersion.leakcanary}",
             "leakcanary-android-no-op"  : "com.squareup.leakcanary:leakcanary-android-no-op:${dependVersion.leakcanary}",
+            //协程
+            "coroutines-core"           : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3",
+            "coroutines-android"        : "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3",
     ]
 }
