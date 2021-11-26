@@ -46,7 +46,8 @@ ext {
             "glide": "io.github.Onionsss:glide:1.0.1",
             "bean": "io.github.Onionsss:bean:1.0.0",
             "protocol": "io.github.Onionsss:protocol:1.0.1",
-            "http": "io.github.Onionsss:http:1.0.3",
+            "http": "io.github.Onionsss:http:1.0.4",
+            "toast": "io.github.Onionsss:http:1.0.0",
             "flowlayout": "io.github.Onionsss:flowlayout:1.0.0"
     ]
 

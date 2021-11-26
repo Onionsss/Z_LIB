@@ -95,7 +95,7 @@ fun <T> CoroutineScope.requestPage(view: ViewProtocol,
 
                     if(wrapper.getOriginData() is DataList<*>){
                         //如果是集合
-                        val it = wrapper.data as DataList<*>
+                        val it = wrapper.getOriginData() as DataList<*>
                         //是分页数据
                         it.page = page
 
@@ -103,7 +103,6 @@ fun <T> CoroutineScope.requestPage(view: ViewProtocol,
                             it.page.pageNum--
                         }
                     }
-
                     if(wrapper.getOriginData() is PageList<*>){
                         val it = wrapper.getOriginData() as PageList<*>
                         it.page = page

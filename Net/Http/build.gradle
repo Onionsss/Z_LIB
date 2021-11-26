@@ -51,4 +51,4 @@ dependencies {
     compileOnly rootProject.ext.onion["logger"]
 }
 
-apply from: '../../publish/publish_http.gradle'
+apply from: 'publish_http.gradle'

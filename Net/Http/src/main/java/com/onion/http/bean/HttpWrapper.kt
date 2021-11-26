@@ -9,20 +9,14 @@ package com.onion.http.bean
  * EMAIL: 759308541@qq.com
  * History:
  */
-open class HttpWrapper<T>(var code: Int, var info: String, val data: T) {
+abstract class HttpWrapper<T>() {
 
     //拿到原始的code码
-    fun getOriginCode(): Int{
-        return code
-    }
+    abstract fun getOriginCode(): Int
 
     //拿到原始的code码
-    fun getOriginData(): T{
-        return data
-    }
+    abstract fun getOriginData(): T
 
-    fun getOriginMsg(): String?{
-        return info
-    }
+    abstract fun getOriginMsg(): String
 
 }

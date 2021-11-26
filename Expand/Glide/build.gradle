@@ -35,4 +35,4 @@ dependencies {
     implementation rootProject.ext.dependencies["glide"]
 }
 
-apply from: '../../publish/publish_glide.gradle'
+apply from: 'publish_glide.gradle'

@@ -35,4 +35,4 @@ dependencies {
     implementation rootProject.ext.dependencies["gson"]
 }
 
-apply from: '../../publish/publish_logger.gradle'
+apply from: 'publish_logger.gradle'

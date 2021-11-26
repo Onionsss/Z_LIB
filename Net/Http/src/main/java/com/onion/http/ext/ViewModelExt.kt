@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.onion.http.bean.*
 import com.onion.http.exception.AppException
 import com.onion.http.vm.BaseViewModel
+import com.onion.protocol.PageState
 import com.onion.protocol.ViewProtocol
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
@@ -96,7 +97,7 @@ fun <T> BaseViewModel.requestPage(
 /**
  * 对于结果的解析
  */
-fun <T> ViewProtocol.state(
+fun <T> ViewProtocol.normal(
     httpState: HttpState<T>,
     httpCallBack: HttpCallBack<T>,
     httpParams: HttpParams = HttpParams.default()
@@ -135,6 +136,62 @@ fun <T> ViewProtocol.state(
         is HttpState.Error -> {
             disDialog()
 
+            if(httpParams.showMsg){
+                showMsg(httpState.error.msg)
+            }
+
+            httpCallBack.onError?.run { this(httpState.error) }
+            httpCallBack.onErrorFailed?.run {
+                this()
+            }
+            httpCallBack.onFinish?.run { this() }
+        }
+    }
+}
+
+/**
+ * 对于结果的解析
+ */
+fun <T> ViewProtocol.state(
+    httpState: HttpState<T>,
+    httpCallBack: HttpCallBack<T>,
+    httpParams: HttpParams = HttpParams.default()
+){
+    when (httpState) {
+        is HttpState.Loading -> {
+
+            if(httpParams.showDialog){
+                showDialog()
+            }
+
+            httpCallBack.onLoading?.run { this }
+        }
+        is HttpState.Success -> {
+            disDialog()
+            showState(PageState.success)
+            httpCallBack.onSuccess(httpState.data)
+            httpCallBack.onFinish?.run { this() }
+        }
+        is HttpState.Failed -> {
+            disDialog()
+            showState(PageState.pageError)
+            if(httpParams.showMsg){
+                showMsg(httpState.data.getOriginMsg())
+            }
+
+            httpCallBack.onFailed?.run {
+                this(httpState.data)
+            }
+
+            httpCallBack.onErrorFailed?.run {
+                this()
+            }
+
+            httpCallBack.onFinish?.run { this() }
+        }
+        is HttpState.Error -> {
+            disDialog()
+            showState(PageState.netError)
             if(httpParams.showMsg){
                 showMsg(httpState.error.msg)
             }

@@ -44,4 +44,4 @@ dependencies {
     implementation rootProject.ext.dependencies["recyclerviewx"]
 }
 
-apply from: '../../publish/publish_recy.gradle'
+apply from: 'publish_recy.gradle'
