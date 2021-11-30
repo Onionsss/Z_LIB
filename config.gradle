@@ -48,6 +48,7 @@ ext {
             "protocol": "io.github.Onionsss:protocol:1.0.1",
             "http": "io.github.Onionsss:http:1.0.4",
             "toast": "io.github.Onionsss:http:1.0.0",
+            "tab": "io.github.Onionsss:tab:1.0.0",
             "flowlayout": "io.github.Onionsss:flowlayout:1.0.0"
     ]
 
@@ -74,7 +75,8 @@ ext {
             "wheelview"                 : "com.pl:wheelview:0.6.4",
             "eventbus"                  : "org.greenrobot:eventbus:3.1.1",
             "smartRefresh"              : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.3",
-            "FlycoTabLayout_Lib"        : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            "FlycoTabLayout_Lib"        : "io.github.h07000223:flycoTabLayout:3.0.0",
+            "MagicIndicator"            : "com.github.hackware1993:MagicIndicator:1.7.0",
             "banner"                    : "com.youth.banner:banner:1.4.10",
             "qmui"                      : "com.qmuiteam:qmui:2.0.0-alpha10",
             "shimmer"                   : "com.facebook.shimmer:shimmer:0.5.0", //闪光控件
