@@ -49,6 +49,7 @@ ext {
             "http": "io.github.Onionsss:http:1.0.4",
             "toast": "io.github.Onionsss:http:1.0.0",
             "tab": "io.github.Onionsss:tab:1.0.0",
+            "fragmentation": "io.github.Onionsss:fragmentation:1.0.0",
             "flowlayout": "io.github.Onionsss:flowlayout:1.0.0"
     ]
 
