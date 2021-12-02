@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content">
+    <com.onion.view.Line
+        android:id="@+id/list_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_below="@+id/list_bottom_line"
+        android:paddingLeft="@dimen/x22"
+        android:paddingRight="@dimen/x22"
+        android:paddingTop="@dimen/x15"
+        android:paddingBottom="@dimen/x15"
+        android:textSize="@dimen/s13"
+        android:textColor="@color/black"
+        android:text="别翻了,没有更多评论了~"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -12,10 +12,3 @@ import android.widget.ImageView
  * EMAIL: 759308541@qq.com
  * History:
  */
-fun ImageView.setSize(width: Int, w: Float, h: Float){
-    val height: Float = width / w * h
-    val params = this.layoutParams as ViewGroup.MarginLayoutParams
-    params.height = height.toInt()
-    params.width = width
-    this.layoutParams = params
-}

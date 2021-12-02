@@ -1,6 +1,7 @@
 package com.onion.ext.view
 
 import android.view.View
+import android.view.ViewGroup
 
 /**
  * Copyright (C), 2021-2021, 易码盛
@@ -11,6 +12,13 @@ import android.view.View
  * EMAIL: 759308541@qq.com
  * History:
  */
+fun View.setSize(width: Int, w: Float, h: Float){
+    val height: Float = width / w * h
+    val params = this.layoutParams as ViewGroup.MarginLayoutParams
+    params.height = height.toInt()
+    params.width = width
+    this.layoutParams = params
+}
 
 fun View.gone(): View{
     this.visibility = View.GONE
