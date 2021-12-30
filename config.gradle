@@ -48,7 +48,9 @@ ext {
             "protocol": "io.github.Onionsss:protocol:1.0.1",
             "http": "io.github.Onionsss:http:1.0.4",
             "toast": "io.github.Onionsss:http:1.0.0",
+            "view": "io.github.Onionsss:view:1.0.4",
             "tab": "io.github.Onionsss:tab:1.0.0",
+            "multView": "io.github.Onionsss:multView:1.0.0",
             "fragmentation": "io.github.Onionsss:fragmentation:1.0.0",
             "flowlayout": "io.github.Onionsss:flowlayout:1.0.0"
     ]
@@ -69,7 +71,7 @@ ext {
             "viewpager2"                : "androidx.viewpager2:viewpager2:1.0.0",
             //   ui
             "PhotoView"                 : "com.bm.photoview:library:1.4.1",
-            "pic_select"                 : "com.github.LuckSiege.PictureSelector:picture_library:v2.6.0", //图片选择
+            "pic_select"                : "com.github.LuckSiege.PictureSelector:picture_library:v2.6.0", //图片选择
             "gif"                       : "pl.droidsonroids.gif:android-gif-drawable:1.2.19",  //显示加载gif
             "weavey-dialog"             : "com.lai.weavey:dialog:1.1",
             "base-adapter"              : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22",

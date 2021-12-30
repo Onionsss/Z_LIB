@@ -23,8 +23,8 @@ class User {
 class News(var style: Int): Mult{
     override fun getMultType(): Int {
         when(style){
-            0 -> return R.layout.item1
-            1 -> return R.layout.item2
+            0 -> return 1
+            1 -> return 1
         }
 
         return 0
