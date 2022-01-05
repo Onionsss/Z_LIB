@@ -45,4 +45,5 @@ dependencies {
     implementation project(path: ':View:Tab')
     implementation project(path: ':View:Recy')
     implementation project(path: ':View:Toast')
+    implementation project(path: ':View:View')
 }

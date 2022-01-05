@@ -17,14 +17,14 @@ open class MyRecyclerView(ctx: Context, attrs: AttributeSet): RecyclerView(ctx, 
 
     init {
         overScrollMode = View.OVER_SCROLL_NEVER
+        val anim = itemAnimator as SimpleItemAnimator
         /**
          * 去掉默认动画
          */
-        getItemAnimator()?.setAddDuration(0)
-        getItemAnimator()?.setChangeDuration(0)
-        getItemAnimator()?.setMoveDuration(0)
-        getItemAnimator()?.setRemoveDuration(0)
-        val anim = getItemAnimator() as SimpleItemAnimator
+        anim.addDuration = 0
+        anim.changeDuration = 0
+        anim.moveDuration = 0
+        anim.removeDuration = 0
         anim.supportsChangeAnimations = false
     }
 

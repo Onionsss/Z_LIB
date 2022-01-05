@@ -12,4 +12,14 @@ import androidx.appcompat.widget.AppCompatTextView
  * Description:
  */
 class ZTextView(ctx: Context, attrs: AttributeSet): AppCompatTextView(ctx,attrs) {
+
+    fun set(ch: CharSequence?){
+        if(ch.isNullOrEmpty()){
+            text = ""
+        }
+
+        text = ch
+    }
+
+
 }

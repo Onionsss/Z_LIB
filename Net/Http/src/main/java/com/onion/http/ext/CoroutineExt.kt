@@ -4,6 +4,7 @@ import com.onion.http.bean.*
 import com.onion.http.exception.AppException
 import com.onion.protocol.ViewProtocol
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 /**
@@ -19,8 +20,8 @@ fun <T> CoroutineScope.request(view: ViewProtocol,
                                api: suspend () -> HttpWrapper<T>,
                                httpCallBack: HttpCallBack<T>,
                                httpParams: HttpParams = HttpParams(),
-){
-    launch {
+): Job {
+    return launch {
         kotlin.runCatching {
             if(httpParams.showDialog){
                 view.showDialog(httpParams.msg)
@@ -79,8 +80,8 @@ fun <T> CoroutineScope.requestPage(view: ViewProtocol,
                                    httpCallBack: HttpCallBack<T>,
                                    httpParams: HttpParams = HttpParams(),
                                    page: Page = Page(),
-){
-    launch {
+): Job {
+    return launch {
         kotlin.runCatching {
             if(httpParams.showDialog){
                 view.showDialog(httpParams.msg)
